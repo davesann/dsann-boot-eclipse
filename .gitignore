@@ -11,3 +11,4 @@ pom.xml.asc
 /.classpath
 /.nrepl-history
 /.project
+/gpg.edn

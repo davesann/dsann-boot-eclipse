@@ -1,4 +1,4 @@
-(defproject dsann/dsann-boot-eclipse "0.2.0-SNAPSHOT"
+(defproject dsann/dsann-boot-eclipse "0.2.0"
   :description "Boot Task to create eclipse classpath files"
   :url "https://github.com/davesann/dsann-boot-eclipse"
   :license {:name "Eclipse Public License"
