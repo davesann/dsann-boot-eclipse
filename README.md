@@ -5,16 +5,40 @@ Very simple [Boot](https://github.com/boot-clj/boot) task to create eclipse .cla
 ## Usage
 
 ```clojure
-(set-env! :dependencies #(conj % '[dsann/dsann-boot-eclipse "0.1.0"]))
+(set-env! :dependencies #(conj % '[dsann/dsann-boot-eclipse "0.2.0"]))
 
 (require '[dsann.boot.eclipse :refer [eclipse])
+
+(task-options!
+  eclipse {:name "eclipse-project-name"})
+
 ```
 
-shell> boot eclipse
+```sh
+$ boot eclipse -h
+Generate eclipse .project and .classpath
 
-repl> (boot (eclipse))
+Options:
+  -h, --help       Print this help info.
+  -n, --name NAME  Set the eclipse project name (mandatory parameter) to NAME.
+```
 
-(.classpath file is written directly to the directory where boot is run (using spit). This is necessary because boot filesets write only to target/... If anyone knows a better way todo this please advise.) 
+Name is required either via task-options! or on command line.
+
+```
+$shell> boot eclipse
+$shell> boot eclipse -n "PROJECT_NAME"
+
+$repl> (boot eclipse)
+$repl> (boot (eclipse :name "PROJECT_NAME"))
+
+```
+
+
+## Notes
+
+.classpath and .project files are written directly to the directory where boot is run (using spit).
+ 
 
 ## License
 
