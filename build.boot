@@ -1,4 +1,4 @@
-(def VERSION "0.2.0")
+(def VERSION "0.3.0")
 
 (set-env! :resource-paths #{"src/clj"})
 
