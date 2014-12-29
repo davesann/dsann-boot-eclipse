@@ -36,7 +36,7 @@ $repl> (boot (eclipse :name "PROJECT_NAME"))
 
 ## Clojars
 
-[![Clojars Project](http://clojars.org/dsann/dsann-boot-eclipse/latest-version.svg)]
+![Clojars Project](http://clojars.org/dsann/dsann-boot-eclipse/latest-version.svg)
 
 ## Notes
 
