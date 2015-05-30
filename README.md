@@ -7,7 +7,7 @@ Very simple [Boot](https://github.com/boot-clj/boot) task to create eclipse .cla
 ```clojure
 (set-env! :dependencies #(conj % '[dsann/dsann-boot-eclipse "0.3.0"]))
 
-(require '[dsann.boot.eclipse :refer [eclipse])
+(require '[dsann.boot.eclipse :refer [eclipse]])
 
 (task-options!
   eclipse {:name "eclipse-project-name"})
